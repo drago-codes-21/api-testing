@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import DeployNFT from "./components/1-DeployNft";
+import MintNFT from "./components/2-MintNftKMS";
+import TransferNFT from "./components/3- sendToken";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DeployNFT />
+      <br />
+      <br />
+      <br />
+      <MintNFT />
+      <br />
+      <br />
+      <br />
+      <TransferNFT />
     </div>
   );
 }
