@@ -15,12 +15,11 @@ const MintNFT = () => {
         {
           chain: chain,
           signatureId: signatureId,
-          nonce: 0,
           contractAddress: contractAddress,
           to: to,
           amount: amount,
           fee: {
-            gasLimit: "4000000",
+            gasLimit: "4000000000",
             gasPrice: "10",
           },
         },

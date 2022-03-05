@@ -19,9 +19,8 @@ const TransferNFT = () => {
           contractAddress: contractAddress,
           digits: digits,
           signatureId: signatureId,
-          nonce: 0,
           fee: {
-            gasLimit: "4000000",
+            gasLimit: "4000000000",
             gasPrice: "10",
           },
         },

@@ -5,7 +5,6 @@ const DeployNFT = () => {
   const [chain, setChain] = useState("");
   const [symbol, setSymbol] = useState("");
   const [name, setName] = useState("");
-  const [key, setKey] = useState("");
   const [supply, setSupply] = useState("");
   const [digits, setDigits] = useState(0);
   const [address, setAddress] = useState("");
@@ -17,16 +16,14 @@ const DeployNFT = () => {
         "https://api-eu1.tatum.io/v3/blockchain/token/deploy",
         {
           chain: chain,
-          fromPrivateKey: key,
           name: name,
           symbol: symbol,
           supply: supply,
           digits: digits,
           signatureId: signatureId,
-          nonce: 0,
           address: address,
           fee: {
-            gasLimit: "4000000",
+            gasLimit: "4000000000",
             gasPrice: "10",
           },
         },
@@ -37,7 +34,7 @@ const DeployNFT = () => {
         }
       );
       const data = response.data;
-      console.log(data.txId);
+      console.log(data);
     } catch (error) {
       console.log(error);
     }
@@ -59,13 +56,6 @@ const DeployNFT = () => {
         placeholder="name"
         value={name}
         onChange={(e) => setName(e.target.value)}
-      />
-      <br />
-      key:
-      <input
-        placeholder="key "
-        value={key}
-        onChange={(e) => setKey(e.target.value)}
       />
       <br />
       Symbol:
